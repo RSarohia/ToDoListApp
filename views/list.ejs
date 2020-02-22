@@ -4,8 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List App</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1><%= kindOfDay %></h1>
+    <div class="box">
+        <h1 id="heading"><%= kindOfDay %></h1>
+    </div>
+    <div class="box">
+            <% for (i = 0; i<items.length; i++){ %>
+                <div class="item">
+                    <input type="checkbox">
+                    <p><%= items[i] %></p>
+                </div>
+            <% }; %>
+            <form action="/" method = "POST" autocomplete="off" class="item">
+                <input type="text" name = "newItem" placeholder="Enter New Item">
+                <button type="submit" id="button">+</button>
+            </form>
+        </ul>
+    </div>
 </body>
 </html>
